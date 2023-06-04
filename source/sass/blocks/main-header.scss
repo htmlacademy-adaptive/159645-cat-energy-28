@@ -1,0 +1,136 @@
+.main-header {
+  position: relative;
+
+  padding: 10px 0 18px 0;
+}
+
+.main-header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__logo {
+  &--text {
+    margin-left: 57px;
+  }
+}
+
+.main-header__toggle {
+  position: relative;
+
+  display: block;
+  width: 24px;
+  height: 16px;
+  margin-left: auto;
+  padding: 0;
+
+  background-color: $transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $color-black;
+
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.main-header__toggle-icon {
+  position: absolute;
+  top: 7px;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $color-black;
+
+  transition: all 0.3s ease 0s;
+}
+
+.is-open .main-header__toggle::before {
+  top: 7px;
+
+  transform: rotate(45deg);
+}
+
+.is-open .main-header__toggle::after {
+  bottom: 7px;
+
+  transform: rotate(-45deg);
+}
+
+.is-open .main-header__toggle-icon {
+  height: 0;
+}
+
+.main-header__nav {
+  position: absolute;
+  top: 65px;
+  left: -20px;
+
+  display: none;
+  width: calc(100% + 40px);
+
+  background-color: $color-white;
+
+  .is-open & {
+    display: block;
+  }
+}
+
+.main-header__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.main-header__item {
+  border-top: 1px solid $color-whisper-border;
+
+  &:last-child {
+    border-bottom: 1px solid $color-whisper-border;
+  }
+}
+
+.main-header__link {
+  display: block;
+  padding: 22px 50px 24px 50px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $vp-768) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $vp-1440) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-white;
+  }
+}

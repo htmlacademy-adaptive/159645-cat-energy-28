@@ -1,0 +1,61 @@
+.programs__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.programs__item {
+  padding: 30px 33px 22px 19px;
+
+  background-color: $color-white-smoke;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.programs__title {
+  margin: 0 0 29px 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs__description {
+  margin: 0 0 42px 0;
+  padding: 0;
+
+  line-height: 18px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+  }
+}
+
+.programs__link {
+  padding: 4px 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

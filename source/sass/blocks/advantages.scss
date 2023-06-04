@@ -1,0 +1,40 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 53px;
+}
+
+.advantages__title {
+  margin: 0 0 42px 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $vp-768) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.advantages__item {
+  line-height: 18px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
