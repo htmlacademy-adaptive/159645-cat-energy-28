@@ -1,23 +1,149 @@
-.programs__list {
-  margin: 0;
-  padding: 0;
+.programs {
+  @media (min-width: $vp-768) {
+    margin-bottom: 45px;
+  }
 
-  list-style-type: none;
+  @media (min-width: $vp-768) {
+    margin-bottom: 71px;
+  }
 }
 
-.programs__item {
+.programs__wrapper {
+  @include container;
+}
+
+.programs__list {
+  @include list-reset;
+
+  @media (min-width: $vp-1440) {
+    display: flex;
+
+    gap: 80px;
+  }
+}
+
+.programs__list-item {
+  position: relative;
+
   padding: 30px 33px 22px 19px;
 
   background-color: $color-white-smoke;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $vp-1440) {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-apple;
+    border-radius: 50%;
+
+    @media (min-width: $vp-768) {
+      top: 92px;
+      left: 446px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $vp-1440) {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 77px 316px 57px 52px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-right: 61px;
+    padding-bottom: 55px;
   }
 }
 
-.programs__title {
+.programs__list-icon {
+  position: absolute;
+  z-index: 3;
+
+  display: block;
+
+  &--slim {
+    top: 21px;
+    left: 29px;
+
+    @media (min-width: $vp-768) {
+      top: 81px;
+      left: 476px;
+    }
+
+    @media (min-width: $vp-1440) {
+      top: 41px;
+      left: 67px;
+    }
+  }
+
+  &--pro {
+    top: 35px;
+    left: 13px;
+
+    @media (min-width: $vp-768) {
+      top: 135px;
+      left: 412px;
+    }
+
+    @media (min-width: $vp-1440) {
+      top: 67px;
+      left: 33px;
+    }
+  }
+}
+
+.programs__list-icon--slim svg {
+  @media (min-width: $vp-768) {
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.programs__list-icon--pro svg {
+  @media (min-width: $vp-768) {
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 134px;
+    height: 56px;
+  }
+}
+
+.programs__list-title {
   margin: 0 0 29px 0;
-  padding: 0;
+  padding: 0 0 0 71px;
 
   font-weight: 400;
   font-size: 24px;
@@ -25,12 +151,23 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 24px;
+    padding: 0;
+
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
 }
 
-.programs__description {
+.programs__list-description {
+  position: relative;
+
+  max-width: 340px;
   margin: 0 0 42px 0;
   padding: 0;
 
@@ -38,15 +175,42 @@
   font-family: $ff-lato;
   color: $color-charcoal;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 113px;
+    left: 0;
+
+    width: 240px;
+    height: 1px;
+
+    background-color: $color-gainsboro;
+
+    @media (min-width: $vp-768) {
+      display: none;
+    }
+  }
+
   @media (min-width: $vp-768) {
+    margin-bottom: 52px;
+
     font-size: 16px;
     line-height: 24px;
     color: $color-black;
   }
+
+  @media (min-width: $vp-1440) {
+    max-width: 457px;
+    margin-bottom: 27px;
+  }
 }
 
-.programs__link {
-  padding: 4px 0;
+.programs__list-link {
+  position: relative;
+
+  display: block;
+  width: 134px;
+  padding: 4px 0 4px 0;
 
   font-size: 16px;
   line-height: 16px;
@@ -54,7 +218,40 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 8px;
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../img/svg/arrow.svg");
+
+    @media (min-width: $vp-768) {
+      top: 13px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../img/svg/arrow-hover.svg");
+    width: 32px;
+    right: 0;
+  }
+
+  &:focus {
+    outline: 1px solid $color-black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $vp-768) {
+    width: 165px;
+    padding-right: 57px;
+
     font-size: 20px;
     line-height: 30px;
   }

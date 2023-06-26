@@ -1,17 +1,62 @@
 .main-header {
   position: relative;
 
-  padding: 10px 0 18px 0;
+  @media (min-width: $vp-768) {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 74px;
+
+    &--index {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
 }
 
 .main-header__wrapper {
+  @include container;
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 18px;
+
+  @media (min-width: $vp-768) {
+    padding-top: 2px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-top: 53px;
+    padding-bottom: 10px;
+  }
 }
 
 .main-header__logo {
-  &--text {
-    margin-left: 57px;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $vp-768) {
+    margin-right: 71px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-right: 450px;
   }
 }
 
@@ -49,6 +94,27 @@
   &::after {
     bottom: 0;
   }
+
+  .no-js & {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    display: none;
+  }
 }
 
 .main-header__toggle-icon {
@@ -78,59 +144,4 @@
 
 .is-open .main-header__toggle-icon {
   height: 0;
-}
-
-.main-header__nav {
-  position: absolute;
-  top: 65px;
-  left: -20px;
-
-  display: none;
-  width: calc(100% + 40px);
-
-  background-color: $color-white;
-
-  .is-open & {
-    display: block;
-  }
-}
-
-.main-header__list {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-}
-
-.main-header__item {
-  border-top: 1px solid $color-whisper-border;
-
-  &:last-child {
-    border-bottom: 1px solid $color-whisper-border;
-  }
-}
-
-.main-header__link {
-  display: block;
-  padding: 22px 50px 24px 50px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: $color-black;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  @media (min-width: $vp-768) {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  @media (min-width: $vp-1440) {
-    font-size: 20px;
-    line-height: 30px;
-    color: $color-white;
-  }
 }

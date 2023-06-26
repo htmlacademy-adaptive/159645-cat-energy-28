@@ -1,14 +1,60 @@
 .intro {
+  text-align: center;
+
+  background-image: url("../img/background/bacground-intro-mobile.jpg"), linear-gradient(rgba($color-apple, 0.85) 302px, $color-white 178px);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 302px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bacground-intro-mobile@2x.jpg");
+  }
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    background-color: $color-white;
+    background-image: none;
+    min-height: 810px;
+  }
+
+  @media (min-width: $vp-1440) {
+    position: static;
+    min-height: 552px;
+    padding-top: 223px;
+    padding-bottom: 267px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      background-image: url("../img/background/bacground-intro-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      width: 50%;
+      height: 694px;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bacground-intro-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.intro__wrapper {
+  @include container;
   padding-top: 27px;
   padding-bottom: 20px;
 
-  text-align: center;
-
-  background-image: url("../img/background/bacground-intro.jpg"), linear-gradient($color-apple 302px, $color-white 178px);
-  background-repeat: no-repeat;
-
   @media (min-width: $vp-768) {
-    background-color: $color-white;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    position: relative;
   }
 }
 
@@ -24,7 +70,15 @@
   @media (min-width: $vp-768) {
     font-size: 60px;
     line-height: 60px;
+    text-align: start;
     color: $color-black;
+    padding: 0 204px 0 88px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 40px;
+    padding: 0 665px 0 80px;
   }
 }
 
@@ -39,15 +93,36 @@
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 20px;
+    text-align: start;
     color: $color-black;
+    margin-bottom: 49px;
+    padding-left: 90px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 52px;
+    padding-left: 80px;
   }
 }
 
 .intro__image {
   margin-bottom: 3px;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: -2px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 552px;
+    height: 499px;
+    right: 332px;
+    top: -44px;
+  }
 }
 
 .intro__link {
+  @include button;
   padding: 11px 44px;
 
   line-height: 18px;
@@ -57,5 +132,13 @@
 
     font-size: 20px;
     line-height: 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 244px;
+    margin-left: 91px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-left: 80px;
   }
 }

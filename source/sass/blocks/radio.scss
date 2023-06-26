@@ -1,0 +1,91 @@
+.radio {
+  margin-bottom: 26px;
+  padding: 28px 20px;
+  border-top: 1px solid $color-gainsboro;
+  border-bottom: 1px solid $color-gainsboro;
+
+  @media (min-width: $vp-768) {
+    border: 1px solid $color-whisper-form;
+
+    margin: 0 39px 75px 41px;
+    padding: 30px 29px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: calc(50% - 40px);
+    margin: 0;
+  }
+}
+
+.radio__list {
+  @include list-reset;
+}
+
+.radio__item {
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.radio__control {
+  position: relative;
+
+  display: block;
+  padding-left: 45px;
+
+  cursor: pointer;
+
+  @media (min-width: $vp-768) {
+    padding-left: 60px;
+  }
+}
+
+.radio__control-input[type="radio"]:checked+.radio__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: $color-apple;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  @media (min-width: $vp-768) {
+  width: 18px;
+  height: 18px;
+  }
+}
+
+.radio__control-mark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $color-very-light-grey;
+  border-radius: 50%;
+
+  @media (min-width: $vp-768) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.radio__control-label {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-nero;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

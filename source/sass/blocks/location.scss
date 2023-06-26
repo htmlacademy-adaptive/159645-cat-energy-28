@@ -1,6 +1,32 @@
+.location {
+  @media (min-width: $vp-1440) {
+    position: relative;
+  }
+}
+
 .location__wrapper {
+  @include container;
   display: flex;
-  padding: 26px 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  &--form {
+    background-color: $color-white-smoke;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 56px 70px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 56px 60px 56px 80px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    background-color: $color-white;
+    width: 565px;
+  }
 }
 
 .location__address-wrapper {
@@ -16,10 +42,18 @@
   line-height: 20px;
   color: $color-black-one;
   text-transform: uppercase;
+  max-width: 139px;
 
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 26px;
+  }
+}
+
+.location__address-wrapper {
+  @media (min-width: $vp-768) {
+    max-width: 160px;
+    text-align: end;
   }
 }
 
@@ -33,6 +67,7 @@
 
   @media (min-width: $vp-768) {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 
@@ -47,4 +82,10 @@
   @media (min-width: $vp-768) {
     font-size: 16px;
   }
+}
+
+.location__map-image {
+  width: 100%;
+  height: 100%;
+  display: block;
 }

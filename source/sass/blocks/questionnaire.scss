@@ -1,6 +1,31 @@
+.questionnaire {
+  border-top: 1px solid $color-gainsboro;
+  margin-bottom: 32px;
+
+  @media (min-width: $vp-768) {
+    border-top: none;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 80px;
+  }
+}
+
+.questionnaire__wrapper {
+  padding-top: 27px;
+
+  @media (min-width: $vp-768) {
+    @include container;
+
+    padding-top: 27px;
+    padding-bottom: 32px;
+  }
+}
+
 .questionnaire__title {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 37px 0;
+  padding: 0 20px;
 
   font-weight: 400;
   font-size: 36px;
@@ -9,34 +34,108 @@
   @media (min-width: $vp-768) {
     font-size: 60px;
     line-height: 60px;
+    padding: 0 0 0 39px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 56px;
+    padding: 0;
   }
 }
 
 .questionnaire__description {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 39px 0;
+  padding: 0 20px;
 
   line-height: 18px;
   text-transform: uppercase;
+  max-width: 265px;
 
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 30px;
+    padding: 0 0 0 40px;
+    margin-bottom: 66px;
+    max-width: 360px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 0;
+  }
+}
+
+.questionnaire__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $vp-1440) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .questionnaire__form-group {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 24px 0;
+  padding: 0 20px;
 
   border: none;
+
+  @media (min-width: $vp-768) {
+    padding: 0 37px 0 41px;
+
+    &--information {
+      margin-bottom: 72px;
+    }
+
+    &--contacts {
+      margin-bottom: 65px;
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 0;
+
+    &--information {
+      width: calc(50% - 40px);
+      margin-bottom: 0
+    }
+
+    &--contacts {
+      margin-top: 65px;
+      margin-bottom: 67px;
+      width: 100%;
+    }
+  }
 }
 
 .questionnaire__form-list {
-  margin: 0;
-  padding: 0;
+  @include list-reset;
+}
 
-  list-style-type: none;
+.questionnaire__form-group--contacts .questionnaire__form-list {
+  @media (min-width: $vp-1440) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  }
+}
+
+.questionnaire__form-item {
+  &:not(:last-child) {
+    margin-bottom: 14px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.questionnaire__form-label {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .questionnaire__label-name {
@@ -53,16 +152,30 @@
 
 .questionnaire__form-input {
   padding: 14px 20px 13px 20px;
+  margin-left: 13px;
+  flex-grow: 1;
 
   font-size: 16px;
   line-height: 18px;
   color: $color-charcoal;
   text-transform: uppercase;
+  font-family: $ff-oswald;
 
   border: 1px solid $color-whisper-form;
 
   &--padding {
     padding: 14px 15px;
+    margin-left: 10px;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-charcoal;
+    text-transform: uppercase;
+    font-family: $ff-oswald;
+
+    opacity: 1;
   }
 
   @media (min-width: $vp-768) {
@@ -73,40 +186,63 @@
   }
 }
 
-.questionnaire__control-label {
-  font-size: 16px;
-  line-height: 18px;
-  color: $color-nero;
-  text-transform: uppercase;
-
-  @media (min-width: $vp-768) {
-    font-size: 20px;
-    line-height: 30px;
-  }
+.questionnaire__image {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  text-align: center;
 }
 
 .questionnaire__form-title {
+  margin: 0 0 35px 0;
+  padding: 0;
+
   font-size: 24px;
   line-height: 26px;
 
   @media (min-width: $vp-768) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 76px;
+  }
+}
+
+.questionnaire__button-wrapper {
+  text-align: center;
+  padding: 0 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 0 0 0 41px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 100%;
+    padding: 0;
   }
 }
 
 .questionnaire__button {
+  @include button;
   padding: 7px 44px;
+  margin-bottom: 21px;
+  width: 100%;
 
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: $vp-768) {
+    font-size: 20px;
+    margin: 0 64px 0 0;
     padding: 13px 45px;
+    max-width: 282px;
   }
 
   @media (min-width: $vp-1440) {
-    padding: 13px 188px;
+    max-width: 568px;
+    margin-right: 84px;
   }
 }
 

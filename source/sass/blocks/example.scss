@@ -1,8 +1,29 @@
 .example {
+  background-color: $color-whisper;
+
+  @media (min-width: $vp-768) {
+    background: linear-gradient($color-white 619px, $color-whisper 619px);
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $vp-1440) {
+    background: linear-gradient($color-white 136px, $color-white-smoke 462px);
+  }
+}
+
+.example__wrapper {
+  @include container;
+
   padding-top: 25px;
   padding-bottom: 40px;
 
-  background-color: $color-whisper;
+  @media (min-width: $vp-1440) {
+    display: grid;
+    padding-bottom: 75px;
+
+    gap: 224px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .example__title {
@@ -14,8 +35,14 @@
   line-height: 40px;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 63px;
+
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 146px;
   }
 }
 
@@ -28,45 +55,123 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 54px;
+
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 69px;
+  }
+}
+
+.example__info-wrapper {
+  @media (min-width: $vp-768) {
+    display: flex;
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: $vp-1440) {
+    flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
 .example__list {
-  display: flex;
-  margin: 0 0 11px 0;
+  display: grid;
+  margin: 0 0 34px 0;
   padding: 0;
+
+  text-align: center;
+
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 0;
+
+    gap: 42px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 60px;
+  }
+}
+
+.example__list-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $color-very-light-grey;
+  border-radius: 3px;
 }
 
 .example__item-term {
+  padding: 15px 5px 18px 5px;
+
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    padding: 15px 30px 20px 30px;
+
     font-size: 30px;
     line-height: 37px;
   }
 }
 
 .example__item-definition {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0 10px;
 
   font-size: 12px;
   line-height: 12px;
   font-family: $ff-lato;
   color: $color-charcoal;
 
+  background-color: $color-whisper;
+  transform: translateY(72%);
+
   @media (min-width: $vp-768) {
     font-size: 14px;
     line-height: 14px;
+
+    background-color: $color-white;
+  }
+
+  @media (min-width: $vp-1440) {
+    background-color: $color-white-smoke;
   }
 }
 
 .example__cost {
   margin-bottom: 20px;
+
+  text-align: center;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    text-align: end;
+  }
+
+  @media (min-width: $vp-1440) {
+    flex-direction: row;
+    margin: 0;
+  }
 }
 
 .example__cost-text {
@@ -77,6 +182,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $vp-1440) {
+    margin-right: 63px;
+  }
 }
 
 .example__cost-sum {
@@ -86,5 +195,78 @@
   @media (min-width: $vp-768) {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+.example__slider {
+  position: relative;
+
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media (min-width: $vp-768) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  &--before {
+    z-index: 2;
+
+    width: 50%;
+  }
+
+  &--after {
+    z-index: 1;
+  }
+}
+
+.example__slider-image {
+  width: 280px;
+  max-width: 280px;
+
+  @media (min-width: $vp-768) {
+    width: 560px;
+    max-width: 560px;
+  }
+}
+
+.example__range {
+  position: relative;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+
+  width: 4px;
+  height: 100%;
+
+  background-color: $color-dim-gray;
+  border-radius: 2px;
+}
+
+.example__range-toggle {
+  position: absolute;
+  top: 108px;
+  right: -18px;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: $transparent;
+  background-image: url("../img/svg/slider-button.svg");
+  border: none;
+
+  @media (min-width: $vp-768) {
+    top: 236px;
   }
 }
