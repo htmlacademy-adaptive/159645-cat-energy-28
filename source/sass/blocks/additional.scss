@@ -60,6 +60,7 @@
 
 .additional__list-item {
   padding: 13px 0 19px 0;
+
   border-top: 1px solid $color-very-light-grey;
 
   &:last-child {
@@ -76,10 +77,10 @@
   @media (min-width: $vp-1440) {
     padding: 15px 0 17px 0;
 
+    border-top: 1px solid $color-very-light-grey;
+
     gap: 40px;
     grid-template-columns: 1fr 1fr 245px;
-
-    border-top: 1px solid $color-very-light-grey;
 
     &:last-child {
       border-bottom: 1px solid $color-very-light-grey;

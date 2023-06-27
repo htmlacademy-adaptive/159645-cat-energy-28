@@ -1,4 +1,5 @@
 // Для закрытия/открытия бургерного меню
+
 const mainHeaderToggle = document.querySelector('.main-header__toggle');
 const mainHeader = document.querySelector('.main-header');
 
