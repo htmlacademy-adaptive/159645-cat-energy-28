@@ -35,9 +35,17 @@
 
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   @media (min-width: $vp-768) {
     padding-left: 60px;
   }
+}
+
+.radio__control:hover .radio__control-mark {
+  border-color: $color-silver;
 }
 
 .radio__control-input[type="radio"]:checked+.radio__control-mark::before {

@@ -59,6 +59,19 @@
   }
 }
 
+.main-footer__list-link {
+  color: $color-dim-gray;
+}
+
+.main-footer__list-link:hover svg,
+.main-footer__list-link:focus svg {
+  color: $color-apple;
+}
+
+.main-footer__list-link:active svg {
+  opacity: 0.3;
+}
+
 .main-footer__copyright {
   display: flex;
   justify-content: space-between;
@@ -69,6 +82,16 @@
   font-family: $ff-lato;
   color: $color-charcoal;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__copyright:hover svg,
+.main-footer__copyright:focus svg,
+.main-footer__copyright:active svg {
+  color: $color-apple;
 }
 
 .main-footer__copyright-academy {

@@ -112,6 +112,10 @@
 
 .questionnaire__form-list {
   @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .questionnaire__form-group--contacts .questionnaire__form-list {
@@ -123,6 +127,8 @@
 }
 
 .questionnaire__form-item {
+  width: 100%;
+
   &:not(:last-child) {
     margin-bottom: 14px;
 
@@ -136,6 +142,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .questionnaire__label-name {
@@ -151,6 +158,7 @@
 }
 
 .questionnaire__form-input {
+  position: relative;
   padding: 14px 20px 13px 20px;
   margin-left: 13px;
   flex-grow: 1;
@@ -178,6 +186,18 @@
     opacity: 1;
   }
 
+  &:hover {
+    border-color: $color-very-light-grey;
+  }
+
+  &:focus {
+    outline: 2px solid $color-charcoal;
+  }
+
+  &:focus:invalid {
+    border-color: 2px solid $color-light-coral;
+  }
+
   @media (min-width: $vp-768) {
     padding: 11px 20px;
 
@@ -195,11 +215,36 @@
 }
 
 .questionnaire__form-title {
+  position: relative;
   margin: 0 0 35px 0;
   padding: 0;
 
   font-size: 24px;
   line-height: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: $color-white;
+    top: 50%;
+    left: -20px;
+    right: -20px;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $color-apple;
+    height: 2px;
+    width: 100vw;
+    right: 0;
+    top: 50%;
+    box-shadow: 100vw 0 $color-apple;
+    z-index: -1;
+  }
 
   @media (min-width: $vp-768) {
     font-size: 36px;

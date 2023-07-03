@@ -3,7 +3,7 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import csso from 'gulp-csso';
+import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
@@ -89,7 +89,7 @@ const sprite = () => {
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
+    'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
   ], {
@@ -118,6 +118,13 @@ const server = (done) => {
   });
   done();
 }
+
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+  }
 
 // Watcher
 

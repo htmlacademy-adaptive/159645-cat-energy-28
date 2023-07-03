@@ -55,9 +55,17 @@
 
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   @media (min-width: $vp-768) {
     padding-left: 60px;
   }
+}
+
+.checkbox__control:hover .checkbox__control-mark {
+  border-color: $color-silver;
 }
 
 .checkbox__control-input[type="checkbox"]:checked+.checkbox__control-mark::before {

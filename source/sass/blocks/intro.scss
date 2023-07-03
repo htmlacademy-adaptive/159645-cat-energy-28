@@ -106,6 +106,7 @@
 }
 
 .intro__image {
+  display: block;
   margin-bottom: 3px;
 
   @media (min-width: $vp-768) {
