@@ -6,14 +6,15 @@
 
 .main-footer__wrapper {
   @include container;
+
   padding-top: 40px;
   padding-bottom: 40px;
 
   @media (min-width: $vp-768) {
-    padding-top: 57px;
-    padding-bottom: 57px;
     display: flex;
     justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 57px;
   }
 
   @media (min-width: $vp-1440) {
@@ -24,7 +25,7 @@
 
 .main-footer__logo {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &:hover,
   &:focus {
@@ -36,27 +37,33 @@
   }
 
   @media (min-width: $vp-768) {
+    margin: 5px 0 0 0;
+  }
+
+  @media (min-width: $vp-1440) {
     margin: 0;
   }
 }
 
 .main-footer__list {
-  @include list-reset;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
+  padding: 20px 0 15px 0;
 
-  gap: 24px;
   border-top: 1px solid $color-gainsboro;
   border-bottom: 1px solid $color-gainsboro;
-  padding: 20px 0;
+
+  gap: 24px;
+  @include list-reset;
 
   @media (min-width: $vp-768) {
-    border: none;
-    padding: 0;
-    margin: 0;
     max-width: 140px;
+    margin: 5px 0 0 25px;
+    padding: 0;
+
+    border: none;
   }
 }
 

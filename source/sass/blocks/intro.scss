@@ -13,27 +13,32 @@
 
   @media (min-width: $vp-768) {
     position: relative;
+
+    min-height: 810px;
+
     background-color: $color-white;
     background-image: none;
-    min-height: 810px;
   }
 
   @media (min-width: $vp-1440) {
     position: static;
+
     min-height: 552px;
     padding-top: 223px;
     padding-bottom: 267px;
 
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
       right: 0;
+
+      width: 50%;
+      height: 694px;
+
       background-image: url("../img/background/bacground-intro-desktop.jpg");
       background-repeat: no-repeat;
       background-position: left center;
-      width: 50%;
-      height: 694px;
       background-size: cover;
 
       @media (min-resolution: 2dppx) {
@@ -45,6 +50,7 @@
 
 .intro__wrapper {
   @include container;
+
   padding-top: 27px;
   padding-bottom: 20px;
 
@@ -68,12 +74,13 @@
   color: $color-white;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 41px;
+    padding: 0 204px 0 88px;
+
     font-size: 60px;
     line-height: 60px;
     text-align: start;
     color: $color-black;
-    padding: 0 204px 0 88px;
-    margin-bottom: 41px;
   }
 
   @media (min-width: $vp-1440) {
@@ -91,12 +98,13 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 49px;
+    padding-left: 90px;
+
     font-size: 20px;
     line-height: 20px;
     text-align: start;
     color: $color-black;
-    margin-bottom: 49px;
-    padding-left: 90px;
   }
 
   @media (min-width: $vp-1440) {
@@ -107,7 +115,6 @@
 
 .intro__image {
   display: block;
-  margin-bottom: 3px;
 
   @media (min-width: $vp-768) {
     position: absolute;
@@ -115,28 +122,31 @@
   }
 
   @media (min-width: $vp-1440) {
+    top: -84px;
+    right: 330px;
+
     width: 552px;
     height: 499px;
-    right: 330px;
-    top: -84px;
   }
 }
 
 .intro__link {
   @include button;
+
   padding: 11px 44px;
 
   line-height: 18px;
 
   @media (min-width: $vp-768) {
+    position: relative;
+    z-index: 2;
+
+    max-width: 244px;
+    margin-left: 91px;
     padding: 17px 26px;
 
     font-size: 20px;
     line-height: 20px;
-    position: relative;
-    z-index: 2;
-    max-width: 244px;
-    margin-left: 91px;
   }
 
   @media (min-width: $vp-1440) {

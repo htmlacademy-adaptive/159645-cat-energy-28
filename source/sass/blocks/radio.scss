@@ -1,14 +1,15 @@
 .radio {
   margin-bottom: 26px;
-  padding: 28px 20px;
+  padding: 24px 20px;
+
   border-top: 1px solid $color-gainsboro;
   border-bottom: 1px solid $color-gainsboro;
 
   @media (min-width: $vp-768) {
-    border: 1px solid $color-whisper-form;
-
     margin: 0 39px 75px 41px;
     padding: 30px 29px;
+
+    border: 1px solid $color-whisper-form;
   }
 
   @media (min-width: $vp-1440) {
@@ -23,7 +24,7 @@
 
 .radio__item {
   &:not(:last-child) {
-    margin-bottom: 18px;
+    margin-bottom: 23px;
   }
 }
 
@@ -48,7 +49,7 @@
   border-color: $color-silver;
 }
 
-.radio__control-input[type="radio"]:checked+.radio__control-mark::before {
+.radio__control-input[type="radio"]:checked + .radio__control-mark::before {
   content: "";
   position: absolute;
   top: 50%;

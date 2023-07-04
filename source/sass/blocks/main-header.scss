@@ -2,28 +2,30 @@
   position: relative;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 62px;
+    margin-bottom: 46px;
   }
 
   @media (min-width: $vp-1440) {
-    margin-bottom: 74px;
+    margin-bottom: 60px;
 
     &--index {
       position: absolute;
-      left: 0;
       top: 0;
-      width: 100%;
+      left: 0;
       z-index: 2;
+
+      width: 100%;
     }
   }
 }
 
 .main-header__wrapper {
   @include container;
+
   display: flex;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 18px;
+  padding-bottom: 13px;
 
   @media (min-width: $vp-768) {
     padding-top: 2px;
@@ -52,7 +54,7 @@
   }
 
   @media (min-width: $vp-768) {
-    margin-right: 71px;
+    margin-right: 81px;
   }
 
   @media (min-width: $vp-1440) {

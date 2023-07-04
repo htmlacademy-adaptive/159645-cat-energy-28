@@ -1,25 +1,30 @@
 .show-more {
   position: relative;
-  padding-top: 70px;
-  padding-bottom: 25px;
+
+  padding-top: 80px;
+  padding-bottom: 23px;
 
   text-align: center;
+
   border-bottom: 1px solid $color-whisper-card;
 
   &::before,
   &::after {
-    position: absolute;
-    top: 28px;
-    left: 145px;
     content: "";
+    position: absolute;
+    top: 40px;
+    left: 145px;
+
     width: 30px;
     height: 2px;
+
     background-color: $color-light-gray;
 
     @media (min-width: $vp-768) {
-      width: 60px;
       top: 80px;
       left: 130px;
+
+      width: 60px;
     }
 
     @media (min-width: $vp-1440) {
@@ -32,8 +37,9 @@
   }
 
   @media (min-width: $vp-768) {
-    padding: 159px 35px 36px 36px;
     margin-top: 81px;
+    padding: 159px 35px 36px 36px;
+
     border: 2px solid $color-white-smoke;
   }
 }
@@ -49,10 +55,11 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 23px;
+    padding: 0 57px;
+
     font-size: 20px;
     line-height: 22px;
-    padding: 0 57px;
-    margin-bottom: 23px;
   }
 
   @media (min-width: $vp-1440) {
@@ -70,10 +77,11 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 87px;
+    padding: 0 42px;
+
     font-size: 16px;
     line-height: 18px;
-    padding: 0 42px;
-    margin-bottom: 87px;
   }
 
   @media (min-width: $vp-1440) {

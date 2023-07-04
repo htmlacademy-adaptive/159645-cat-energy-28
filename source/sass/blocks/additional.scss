@@ -16,22 +16,45 @@
 }
 
 .additional__title {
-  margin: 0 0 36px 0;
-  padding: 0;
+  position: relative;
+
+  max-width: 270px;
+  margin: 0 0 36px -20px;
+  padding: 0 0 0 20px;
 
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
 
+  background-color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 4px);
+    left: 50%;
+    z-index: -1;
+
+    width: 200vw;
+    height: 2px;
+
+    background-color: $color-apple;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: $vp-768) {
-    margin: 0 0 80px 37px;
+    max-width: 413px;
+    margin: 0 0 80px 0;
+    padding: 0 37px;
 
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: $vp-1440) {
+    max-width: 373px;
     margin-left: 0;
+    padding: 0;
   }
 }
 
@@ -47,24 +70,34 @@
 .additional__list {
   @include list-reset;
 
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 69px;
+    margin-bottom: 70px;
+
+    border: 1px solid $color-very-light-grey;
+    border-top: none;
+    border-bottom: none;
   }
 
   @media (min-width: $vp-1440) {
     margin-bottom: 0;
+
+    border: none;
   }
 }
 
 .additional__list-item {
-  padding: 13px 0 19px 0;
+  padding: 13px 0 17px 0;
 
   border-top: 1px solid $color-very-light-grey;
 
   &:last-child {
     border-bottom: 1px solid $color-very-light-grey;
+
+    @media (min-width: $vp-1440) {
+      border-bottom: 1px solid $color-very-light-grey;
+    }
   }
 
   @media (min-width: $vp-768) {
@@ -75,16 +108,12 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 15px 0 17px 0;
+    padding: 19px 0 17px 0;
 
     border-top: 1px solid $color-very-light-grey;
 
     gap: 40px;
     grid-template-columns: 1fr 1fr 245px;
-
-    &:last-child {
-      border-bottom: 1px solid $color-very-light-grey;
-    }
   }
 }
 
@@ -153,8 +182,11 @@
 
   padding: 10px 109px;
 
+  font-size: 16px;
+  line-height: 20px;
+
   @media (min-width: $vp-768) {
-    padding: 7px 220px;
+    padding: 10px 220px;
 
     text-align: center;
 
@@ -183,8 +215,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 59px;
-    left: 101px;
+    top: 60px;
+    left: 80px;
 
     width: 78px;
     height: 80px;
@@ -203,7 +235,7 @@
 
   @media (min-width: $vp-768) {
     max-height: 200px;
-    padding: 71px 124px 69px 422px;
+    padding: 74px 124px 69px 422px;
 
     background-image: url("../img/background/background-promotion-tablet.jpg");
 
