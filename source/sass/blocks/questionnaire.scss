@@ -216,40 +216,38 @@
 
 .questionnaire__form-title {
   position: relative;
-  margin: 0 0 35px 0;
-  padding: 0;
+  width: max-content;
+  max-width: 228px;
+  margin: 0 0 35px -23px;
+  padding: 0 23px;
 
   font-size: 24px;
   line-height: 26px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    background-color: $color-white;
-    top: 50%;
-    left: -20px;
-    right: -20px;
-    z-index: -1;
-    transform: translateY(-50%);
-  }
+  background-color: $color-white;
 
   &::after {
-    position: absolute;
     content: "";
-    background-color: $color-apple;
-    height: 2px;
-    width: 100vw;
-    right: 0;
-    top: 50%;
-    box-shadow: 100vw 0 $color-apple;
+    position: absolute;
+    top: 15px;
+    left: 50%;
     z-index: -1;
+    width: 200vw;
+    height: 2px;
+    background-color: $color-apple;
+    transform: translateX(-50%);
+
+    @media (min-width: $vp-768) {
+      top: 23px;
+    }
   }
 
   @media (min-width: $vp-768) {
     font-size: 36px;
     line-height: 36px;
+
     margin-bottom: 76px;
+
+    max-width: 600px;
   }
 }
 

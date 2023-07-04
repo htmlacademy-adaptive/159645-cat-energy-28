@@ -12,8 +12,10 @@
 }
 
 .checkbox__title {
-  margin: 0 0 40px 0;
-  padding: 0;
+  margin: 0 0 40px -23px;
+  width: max-content;
+  max-width: 228px;
+  padding: 0 23px;
 
   font-weight: 400;
   font-size: 24px;
@@ -24,6 +26,8 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 57px;
+
+    max-width: 600px;
   }
 }
 

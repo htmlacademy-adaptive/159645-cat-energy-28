@@ -12,8 +12,11 @@
 }
 
 .textarea__title {
-  margin: 0 0 38px 0;
-  padding: 0;
+  margin: 0 0 38px -23px;
+  width: max-content;
+  max-width: 228px;
+  padding: 0 23px;
+
 
   font-size: 24px;
   line-height: 26px;
@@ -21,7 +24,6 @@
   @media (min-width: $vp-768) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 76px;
   }
 }
 

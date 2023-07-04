@@ -33,6 +33,7 @@
   @media (min-width: $vp-768) {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 }
 
@@ -61,7 +62,7 @@
   @media (min-width: $vp-768) {
     display: flex;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 13px;
     border-top: none;
 
     &:last-child {
@@ -102,7 +103,7 @@
     &--current {
       &::before {
         position: absolute;
-        bottom: -9px;
+        bottom: -8px;
         left: 0;
         content: "";
         width: 100%;
