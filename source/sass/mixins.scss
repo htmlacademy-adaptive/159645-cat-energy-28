@@ -1,0 +1,46 @@
+@mixin container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $vp-768) {
+   padding: 0 30px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 0 110px;
+  }
+}
+
+@mixin button {
+  display: block;
+
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $color-apple;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-limeade;
+  }
+
+  &:focus {
+    outline: 2px solid $color-black;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}

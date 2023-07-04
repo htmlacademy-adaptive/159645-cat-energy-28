@@ -1,0 +1,155 @@
+.intro {
+  text-align: center;
+
+  background-image: url("../img/background/bacground-intro-mobile.jpg"), linear-gradient(rgba($color-apple, 0.85) 302px, $color-white 178px);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 302px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bacground-intro-mobile@2x.jpg");
+  }
+
+  @media (min-width: $vp-768) {
+    position: relative;
+
+    min-height: 810px;
+
+    background-color: $color-white;
+    background-image: none;
+  }
+
+  @media (min-width: $vp-1440) {
+    position: static;
+
+    min-height: 552px;
+    padding-top: 223px;
+    padding-bottom: 267px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 50%;
+      height: 694px;
+
+      background-image: url("../img/background/bacground-intro-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bacground-intro-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.intro__wrapper {
+  @include container;
+
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-width: $vp-768) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    position: relative;
+  }
+}
+
+.intro__title {
+  margin: 0 0 25px 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-white;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 41px;
+    padding: 0 204px 0 88px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    color: $color-black;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 40px;
+    padding: 0 665px 0 80px;
+  }
+}
+
+.intro__slogan {
+  margin: 0 0 29px 0;
+  padding: 0;
+
+  line-height: 14px;
+  color: $color-white;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 49px;
+    padding-left: 90px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    color: $color-black;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-bottom: 52px;
+    padding-left: 80px;
+  }
+}
+
+.intro__image {
+  display: block;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: -2px;
+  }
+
+  @media (min-width: $vp-1440) {
+    top: -84px;
+    right: 330px;
+
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.intro__link {
+  @include button;
+
+  padding: 11px 44px;
+
+  line-height: 18px;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    z-index: 2;
+
+    max-width: 244px;
+    margin-left: 91px;
+    padding: 17px 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-left: 80px;
+  }
+}

@@ -1,0 +1,109 @@
+.main-footer {
+  text-align: center;
+
+  background-color: $color-white-smoke;
+}
+
+.main-footer__wrapper {
+  @include container;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 57px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+}
+
+.main-footer__logo {
+  display: block;
+  margin-bottom: 15px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    margin: 5px 0 0 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0;
+  }
+}
+
+.main-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px 0 15px 0;
+
+  border-top: 1px solid $color-gainsboro;
+  border-bottom: 1px solid $color-gainsboro;
+
+  gap: 24px;
+  @include list-reset;
+
+  @media (min-width: $vp-768) {
+    max-width: 140px;
+    margin: 5px 0 0 25px;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.main-footer__list-link {
+  color: $color-dim-gray;
+}
+
+.main-footer__list-link:hover svg,
+.main-footer__list-link:focus svg {
+  color: $color-apple;
+}
+
+.main-footer__list-link:active svg {
+  opacity: 0.3;
+}
+
+.main-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-footer__copyright:hover svg,
+.main-footer__copyright:focus svg,
+.main-footer__copyright:active svg {
+  color: $color-apple;
+}
+
+.main-footer__copyright-academy {
+  @media (min-width: $vp-768) {
+    margin-right: 28px;
+  }
+}

@@ -1,0 +1,124 @@
+.checkbox {
+  margin-bottom: 37px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $vp-1440) {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+}
+
+.checkbox__title {
+  width: max-content;
+  max-width: 228px;
+  margin: 0 0 40px -23px;
+  padding: 0 23px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $color-black;
+
+  @media (min-width: $vp-768) {
+    max-width: 600px;
+    margin-bottom: 60px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.checkbox__list {
+  @include list-reset;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+
+    gap: 20px 56px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $vp-1440) {
+    gap: 20px 82px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.checkbox__item {
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.checkbox__control {
+  position: relative;
+
+  display: block;
+  padding-left: 46px;
+
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-left: 60px;
+  }
+}
+
+.checkbox__control:hover .checkbox__control-mark {
+  border-color: $color-silver;
+}
+
+.checkbox__control-input[type="checkbox"]:checked + .checkbox__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 18px;
+  height: 14px;
+
+  background-image: url("../img/svg/checkbox-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(-50%) translateY(-50%);
+
+  @media (min-width: $vp-768) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.checkbox__control-mark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $color-very-light-grey;
+
+  @media (min-width: $vp-768) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.checkbox__control-label {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-black;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
