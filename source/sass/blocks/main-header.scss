@@ -54,11 +54,11 @@
   }
 
   @media (min-width: $vp-768) {
-    margin-right: 81px;
+    margin-right: 94px;
   }
 
   @media (min-width: $vp-1440) {
-    margin-right: 450px;
+    margin-right: 540px;
   }
 }
 
@@ -90,11 +90,11 @@
   }
 
   &::before {
-    top: 0;
+    top: -1px;
   }
 
   &::after {
-    bottom: 0;
+    bottom: -1px;
   }
 
   .no-js & {

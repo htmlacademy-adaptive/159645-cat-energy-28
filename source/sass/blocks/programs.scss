@@ -15,8 +15,11 @@
 .programs__list {
   @include list-reset;
 
+  align-items: start;
+
   @media (min-width: $vp-1440) {
     display: flex;
+    flex-wrap: wrap;
 
     gap: 80px;
   }
@@ -25,7 +28,7 @@
 .programs__list-item {
   position: relative;
 
-  padding: 30px 33px 22px 19px;
+  padding: 30px 33px 22px 21px;
 
   background-color: $color-white-smoke;
 
@@ -209,7 +212,7 @@
   position: relative;
 
   display: block;
-  width: 134px;
+  width: 138px;
   padding: 4px 0 4px 0;
 
   font-size: 16px;
@@ -222,7 +225,7 @@
     content: "";
     position: absolute;
     top: 6px;
-    right: 8px;
+    right: 15px;
 
     width: 24px;
     height: 12px;
@@ -231,11 +234,12 @@
 
     @media (min-width: $vp-768) {
       top: 13px;
+      right: 9px;
     }
   }
 
   &:hover::after {
-    right: 0;
+    right: 5px;
 
     width: 32px;
 

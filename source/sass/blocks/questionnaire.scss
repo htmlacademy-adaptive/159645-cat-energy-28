@@ -144,7 +144,9 @@
 }
 
 .questionnaire__form-group--contacts .questionnaire__form-item:not(:last-child) {
-  margin-bottom: 0;
+  @media (min-width: $vp-1440) {
+    margin-bottom: 0;
+  }
 }
 
 .questionnaire__form-label {
@@ -217,7 +219,7 @@
 
     &--padding {
       margin-left: 10px;
-      padding: 11px 29px;
+      padding: 11px 50px 11px 29px;
     }
 
     &::placeholder {
