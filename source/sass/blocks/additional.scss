@@ -11,14 +11,14 @@
 .additional__wrapper {
   @include container;
 
-  padding-top: 25px;
+  padding-top: 26px;
   padding-bottom: 35px;
 }
 
 .additional__title {
   position: relative;
 
-  max-width: 270px;
+  max-width: 267px;
   margin: 0 0 36px -20px;
   padding: 0 0 0 20px;
 
@@ -73,7 +73,7 @@
   margin-bottom: 38px;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
 
     border: 1px solid $color-very-light-grey;
     border-top: none;
@@ -108,7 +108,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 19px 0 17px 0;
+    padding: 20px 0 16px 0;
 
     border-top: 1px solid $color-very-light-grey;
 
@@ -147,8 +147,13 @@
   margin-bottom: 15px;
 
   @media (min-width: $vp-768) {
-    display: block;
+    margin-top: -4px;
+
+    display: grid;
+    grid-template-columns: 132px 42px;
+    gap: 50px;
     margin-left: auto;
+    align-items: center;
   }
 
   @media (min-width: $vp-1440) {
@@ -164,7 +169,8 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
-    margin-right: 49px;
+    display: flex;
+    justify-content: end;
 
     font-size: 16px;
     line-height: 20px;
@@ -175,6 +181,14 @@
   line-height: 14px;
   font-family: $ff-lato;
   color: $color-charcoal;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: end;
+  }
 }
 
 .additional__link-order {
@@ -194,7 +208,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    padding: 7px 26px;
+    padding: 7px 26px 8px 26px;
 
     grid-column-start: 3;
   }
@@ -216,12 +230,17 @@
     content: "";
     position: absolute;
     top: 60px;
-    left: 80px;
+    left: 101px;
 
     width: 78px;
     height: 80px;
 
     background-image: url("../img/svg/promotion-icon.svg");
+
+    @media (min-width: $vp-768) {
+      top: 57px;
+      left: 79px;
+    }
 
     @media (min-width: $vp-1440) {
       top: 56px;
@@ -235,7 +254,7 @@
 
   @media (min-width: $vp-768) {
     max-height: 200px;
-    padding: 74px 124px 69px 422px;
+    padding: 70px 124px 69px 422px;
 
     background-image: url("../img/background/background-promotion-tablet.jpg");
 

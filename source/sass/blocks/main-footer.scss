@@ -46,8 +46,9 @@
 }
 
 .main-footer__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include list-reset;
+
+  display: grid;
   justify-content: center;
   margin-bottom: 20px;
   padding: 20px 0 15px 0;
@@ -56,7 +57,7 @@
   border-bottom: 1px solid $color-gainsboro;
 
   gap: 24px;
-  @include list-reset;
+  grid-template-columns: repeat(3, 28px);
 
   @media (min-width: $vp-768) {
     max-width: 140px;
@@ -81,6 +82,7 @@
 }
 
 .main-footer__copyright {
+  align-self: start;
   display: flex;
   justify-content: space-between;
   align-items: center;

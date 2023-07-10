@@ -31,10 +31,13 @@
   @include list-reset;
 
   @media (min-width: $vp-768) {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 64px 154px 154px;
+    gap: 34px;
+  }
 
-    flex-wrap: wrap;
+  @media (min-width: $vp-1440) {
+    grid-template-columns: 71px 171px 171px;
   }
 }
 
@@ -67,7 +70,7 @@
   @media (min-width: $vp-768) {
     display: flex;
     justify-content: center;
-    padding: 0 13px;
+    padding: 0;
     border-top: none;
   }
 }
@@ -104,7 +107,7 @@
     &--current {
       &::before {
         position: absolute;
-        bottom: -8px;
+        bottom: -10px;
         left: 0;
         content: "";
         width: 100%;
@@ -118,5 +121,11 @@
   @media (min-width: $vp-1440) {
     font-size: 20px;
     line-height: 30px;
+
+    &--current {
+      &::before {
+        bottom: -7px;
+      }
+    }
   }
 }

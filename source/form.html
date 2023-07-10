@@ -113,7 +113,8 @@
               <li class="questionnaire__form-item">
                 <label class="questionnaire__form-label">
                   <span class="questionnaire__label-name">E-mail:*</span>
-                  <input class="questionnaire__form-input questionnaire__form-input--email questionnaire__form-input--padding"
+                  <input
+                    class="questionnaire__form-input questionnaire__form-input--email questionnaire__form-input--padding"
                     type="email" name="email" placeholder="kuklachev@gmail.com" required>
                   <svg class="questionnaire__image" aria-hidden="true" focusable="false" width="20" height="20">
                     <use xlink:href="img/sprite.svg#email-icon"></use>
@@ -123,7 +124,8 @@
               <li class="questionnaire__form-item">
                 <label class="questionnaire__form-label">
                   <span class="questionnaire__label-name">Телефон:*</span>
-                  <input class="questionnaire__form-input questionnaire__form-input--phone questionnaire__form-input--padding"
+                  <input
+                    class="questionnaire__form-input questionnaire__form-input--phone questionnaire__form-input--padding"
                     type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
                   <svg class="questionnaire__image" aria-hidden="true" focusable="false" width="20" height="20">
                     <use xlink:href="img/sprite.svg#phone-icon"></use>
@@ -185,29 +187,34 @@
       </div>
     </section>
     <section class="location">
-      <h2 class="visually-hidden">Местоположение магазина Кэт энерджи.</h2>
-      <div class="location__wrapper location__wrapper--form">
-        <p class="location__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-        <div class="location__address-wrapper">
-          <p class="location__address">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="location__address-city">Санкт-Петербург</p>
+      <div class="location__wrapper">
+        <h2 class="visually-hidden">Местоположение магазина Кэт энерджи.</h2>
+        <div class="location__wrapper-text">
+          <p class="location__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <div class="location__address-wrapper">
+            <p class="location__address">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="location__address-city">Санкт-Петербург</p>
+          </div>
         </div>
-      </div>
-      <div class="location__map">
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/content/map-desktop.webp 1x, img/content/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/content/map-tablet.webp 1x, img/content/map-tablet@2x.webp 2x">
-          <source type="image/webp"
-            srcset="img/content/map-mobile.webp 1x, img/content/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x"
-            width="1440" height="400">
-          <source media="(min-width: 768px)" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x"
-            width="768" height="400">
-          <img class="location__map-image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x"
-            width="320" height="362" alt="Кэт энерджи на интерактивной карте.">
-        </picture>
+        <div class="location__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/content/map-desktop.webp 1x, img/content/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/content/map-tablet.webp 1x, img/content/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/map-mobile.webp 1x, img/content/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)"
+              srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x"
+              width="768" height="400">
+            <img class="location__map-image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x"
+              width="320" height="362" alt="Кэт энерджи на интерактивной карте.">
+          </picture>
+          <iframe class="location__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197582!2d30.320472476360134!3d59.938719162094564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1688731247848!5m2!1sru!2sru"
+            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Кэт энерджи на интерактивной карте."></iframe>
+        </div>
       </div>
     </section>
   </main>
